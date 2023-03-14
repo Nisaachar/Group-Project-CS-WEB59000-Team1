@@ -4,6 +4,7 @@
 // The second argument depends on count state varable. Th effect will be run whenever the count changes.
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import Header from './Header'
 
 function UniInfo() {
   
@@ -11,7 +12,8 @@ function UniInfo() {
     <div>
     <div className="container">
     <nav>
-      <Link to="/" className="nav-button">Visa Information</Link>
+      {/* <Link to="/" className="nav-button">Visa Information</Link> */}
+      <Header />
     </nav>
     </div>
     <div className="center">
