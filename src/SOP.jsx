@@ -18,7 +18,7 @@ function SOP() {
             </nav>
             <div>
             <div className="center">
-                <img src="/images/UniInfo.png" alt="University information"  className="center-image" style={{ transform: 'scale(0.65)' }}/>
+                <img src="/images/Logo.png" alt="Company logo"  className="center-image" style={{ transform: 'scale(0.65)' }}/>
             </div>
             <h2>How to Write a SOP?</h2>
             <h4>What is SOP?</h4>

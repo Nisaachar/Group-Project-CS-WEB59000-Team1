@@ -38,6 +38,8 @@
 .center-image{
   width: 70%;
   margin: 0 auto;
+  height: 25em;
+  width: 40em;
 }
 body {
   background-color: black;
