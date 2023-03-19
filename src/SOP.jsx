@@ -5,6 +5,8 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Header from './Header'
+import Progress from './Progress';
+
 
 function SOP() {
   
@@ -58,6 +60,7 @@ function SOP() {
             Admissions professionals already have your transcripts, resumé, and test scores; the statement of purpose is your chance to tell your story in your own words.
             </p>
             </div>
+            <Progress />
         </div> 
     </div>
   );

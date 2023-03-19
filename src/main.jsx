@@ -10,6 +10,7 @@ import UniInfo from './UniInfo'
 import './index.css'
 import SOP from './SOP'
 import Home from './Home'
+import Progress from './Progress'
 
 import {
   createBrowserRouter,
@@ -31,6 +32,11 @@ const router = createBrowserRouter([
   {
     path: "/Home",
     element: <Home/>,
+  }
+  ,
+  {
+    path: "/Progress",
+    element: <Progress/>,
   }
 ]);
 
