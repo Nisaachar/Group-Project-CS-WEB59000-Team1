@@ -18,7 +18,7 @@ function Login(props) {
         <input value={email} onChange={(e) => setEmail(e.target.value)}type="email" placeholder="youremail@gmail.com" id="email" name="email" />
         <label htmlFor="password">password</label>
         <input value={pass} onChange={(e) => setPass(e.target.value)} type="password" placeholder="********" id="password" name="password" />
-        <Link to="/Visa">
+        <Link to="/Home">
           <button type="submit">Log In</button>
         </Link>
       </form>
