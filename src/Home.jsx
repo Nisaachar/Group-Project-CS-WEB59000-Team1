@@ -13,7 +13,6 @@ function Home() {
     <div>
     <div className="container">
     <nav>
-      {/* <Link to="/" className="nav-button">Visa Information</Link> */}
       <Header />
     </nav>
     </div>

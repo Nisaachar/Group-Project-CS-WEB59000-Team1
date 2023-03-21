@@ -12,11 +12,9 @@ function SOP() {
   
   return (
     <div>
-        <div className="container">
+        <div>
             <nav>
                 <Header />
-
-                {/* <Link to="/" className="nav-button">Visa Information</Link> */}
             </nav>
             <div>
             <div className="center">
@@ -60,7 +58,6 @@ function SOP() {
             Admissions professionals already have your transcripts, resumé, and test scores; the statement of purpose is your chance to tell your story in your own words.
             </p>
             </div>
-            <Progress />
         </div> 
     </div>
   );
