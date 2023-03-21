@@ -8,8 +8,8 @@ import ReactDOM from 'react-dom/client'
 import Visa from './Visa'
 import App from './App'
 import UniInfo from './UniInfo'
-import { Login } from './Login'
-import { Register } from './Register'
+import Login from './Login'
+import Register from './Register'
 import './index.css'
 
 import {
