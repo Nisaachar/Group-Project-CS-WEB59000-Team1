@@ -5,8 +5,11 @@
 // We are passing data via props in QuoteGenerator
 import React from 'react'
 import ReactDOM from 'react-dom/client'
+import Visa from './Visa'
 import App from './App'
 import UniInfo from './UniInfo'
+import { Login } from './Login'
+import { Register } from './Register'
 import './index.css'
 
 import {
@@ -15,13 +18,26 @@ import {
 } from "react-router-dom";
 const router = createBrowserRouter([
   {
-    path: "/",
-    element: <App/>,
+   path:"/",
+   element:<App/>,
+  },
+  {
+    path: "/Visa",
+    element: <Visa/>,
   },
   {
     path: "/UniInfo",
     element: <UniInfo/>,
   },
+  {
+    path: "/Login",
+    element:<Login/>,
+  },
+  {
+    path: "/Register",
+    element:<Register/>,
+  }
+
 ]);
 
 
