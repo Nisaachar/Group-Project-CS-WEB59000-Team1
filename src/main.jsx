@@ -1,8 +1,3 @@
-// We are using 4 functional components for the main page(including App)
-//The 4 functional components for the main page are App, Header, Product and Quote genrator
-// We are using an additional functional component fo the New Products page.In total we are using 5 functional components
-//useState is being used in QuoteGenerator and useEffect is being used in New Pruducts component for the counter
-// We are passing data via props in QuoteGenerator
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import Visa from './Visa'

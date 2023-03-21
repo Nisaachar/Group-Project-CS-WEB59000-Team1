@@ -1,7 +1,3 @@
-// useEffect is used to limit the value of count between 0 and 20
-// useEffect uses callback function as its argument. If count less than 0 setCount updates count to 0
-// The same is applied if greater than 20 to set to 20
-// The second argument depends on count state varable. Th effect will be run whenever the count changes.
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Header from './Header'
