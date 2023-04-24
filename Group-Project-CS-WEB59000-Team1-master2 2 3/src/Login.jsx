@@ -1,12 +1,13 @@
 import React, { useState } from "react";
 // import { Link } from "react-router-dom";
-import { Link, useHistory } from "react-router-dom";
+// import { Link, useHistory } from "react-router-dom";
+import { Link, withRouter } from "react-router-dom";
 
 function Login(props) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState(null);
-  const history = useHistory();
+//   const history = useHistory();
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -26,7 +27,8 @@ function Login(props) {
         // redirect to home page
 //         <Link to="/Home" />;
 //         window.location.href = "/Home";
-           history.push('/Home');
+//            history.push('/Home');
+              props.history.push('/Home');
       })
       .catch((error) => {
         console.error(error);
@@ -70,4 +72,4 @@ function Login(props) {
   );
 }
 
-export default Login;
+export default withRouter(Login);
