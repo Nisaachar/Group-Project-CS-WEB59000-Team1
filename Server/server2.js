@@ -83,7 +83,7 @@ app.get('/api/users', (req, res) => {
     });
 });
 
-app.get('https://web-dev-server-wm7w.onrender.com/api/login', (req, res) => {
+app.get('https://6445efa834418c46b000b848--jade-alpaca-318726.netlify.app/api/login', (req, res) => {
     Product.find({}).select('username password')
       .then((users) => {
         // if (!username) {
