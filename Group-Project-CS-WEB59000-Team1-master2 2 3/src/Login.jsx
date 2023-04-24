@@ -28,7 +28,7 @@ function Login(props) {
         // <Link to="/Home" />;
         window.location.href = "/Home";
 //           props.history.push('/Home');
-      history.push('/Home');
+//       history.push('/Home');
       })
       .catch((error) => {
         console.error(error);
