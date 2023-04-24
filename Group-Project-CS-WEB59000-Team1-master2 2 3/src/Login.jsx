@@ -7,7 +7,7 @@ function Login(props) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState(null);
-  const history = useHistory();
+//   const history = useHistory();
 
   const handleSubmit = (e) => {
     e.preventDefault();
