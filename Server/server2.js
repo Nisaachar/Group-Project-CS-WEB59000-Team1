@@ -73,7 +73,7 @@ const Product = mongoose.model('Users', usersSchema);
 //   });
 
 // defines a route that responds to GET requests to "/api/products", which retrieves all products from the "products" collection and returns them as a JSON response.
-app.get('/api/users', (req, res) => {
+app.get('https://6445efa834418c46b000b848--jade-alpaca-318726.netlify.app/api/users', (req, res) => {
   Product.find({})
     .then((users) => {
       res.json(users);
