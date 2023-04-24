@@ -83,7 +83,7 @@ app.get('/api/users', (req, res) => {
     });
 });
 
-app.get('/api/login', (req, res) => {
+app.get('https://web-dev-server-wm7w.onrender.com/api/login', (req, res) => {
     Product.find({}).select('username password')
       .then((users) => {
         // if (!username) {
