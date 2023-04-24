@@ -73,7 +73,7 @@ const Product = mongoose.model('Users', usersSchema);
 //   });
 
 // defines a route that responds to GET requests to "/api/products", which retrieves all products from the "products" collection and returns them as a JSON response.
-app.get('/api/users', (req, res) => {
+app.get('https://web-dev-server-wm7w.onrender.com/api/users', (req, res) => {
   Product.find({})
     .then((users) => {
       res.json(users);
@@ -83,7 +83,7 @@ app.get('/api/users', (req, res) => {
     });
 });
 
-app.get('/api/login', (req, res) => {
+app.get('https://web-dev-server-wm7w.onrender.com/api/login', (req, res) => {
     Product.find({}).select('username password')
       .then((users) => {
         // if (!username) {
