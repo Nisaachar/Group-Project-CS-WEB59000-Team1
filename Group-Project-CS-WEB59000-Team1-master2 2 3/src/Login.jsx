@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
+import { Link, withRouter } from "react-router-dom";
 
 function Login(props) {
   const [email, setEmail] = useState("");
@@ -9,7 +10,7 @@ function Login(props) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    fetch("http://localhost:8000/api/users")
+    fetch("https://web-dev-server-wm7w.onrender.com/api/users")
       .then((response) => {
         if (!response.ok) {
           throw new Error("Invalid username or password");
@@ -24,7 +25,8 @@ function Login(props) {
         console.log(user);
         // redirect to home page
         // <Link to="/Home" />;
-        window.location.href = "/Home";
+//         window.location.href = "/Home";
+          props.history.push('/Home');
       })
       .catch((error) => {
         console.error(error);
@@ -68,4 +70,4 @@ function Login(props) {
   );
 }
 
-export default Login;
+export default withRouter(Login);
