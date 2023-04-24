@@ -11,7 +11,7 @@ function Login(props) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    fetch("https://6445efa834418c46b000b848--jade-alpaca-318726.netlify.app/assets/index-c8f7a8df.js:67/api/users")
+    fetch("https://6445efa834418c46b000b848--jade-alpaca-318726.netlify.app/api/users")
       .then((response) => {
         if (!response.ok) {
           throw new Error("Invalid username or password");
