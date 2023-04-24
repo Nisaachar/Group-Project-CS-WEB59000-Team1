@@ -118,6 +118,6 @@ app.get('https://web-dev-server-wm7w.onrender.com/api/login', (req, res) => {
 
 // // Serve uploaded images
 // app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
-app.listen(443, () => {
-  console.log('Server running on port 80');
-});
+// app.listen(443, () => {
+//   console.log('Server running on port 80');
+// });
