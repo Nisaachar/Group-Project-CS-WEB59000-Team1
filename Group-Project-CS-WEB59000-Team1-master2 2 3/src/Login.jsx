@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 // import { Link, withRouter } from "react-router-dom";
-import { Link, useHistory } from "react-router-dom";
+// import { Link, useHistory } from "react-router-dom";
 
 function Login(props) {
   const [email, setEmail] = useState("");
@@ -26,7 +26,7 @@ function Login(props) {
         console.log(user);
         // redirect to home page
         // <Link to="/Home" />;
-//         window.location.href = "/Home";
+        window.location.href = "/Home";
 //           props.history.push('/Home');
       history.push('/Home');
       })
