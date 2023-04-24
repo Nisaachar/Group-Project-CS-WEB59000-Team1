@@ -61,7 +61,7 @@ function Login(props) {
         />
         <button type="button" onClick={handleSubmit}>Log In</button>
       </form>
-      {/* <Link to="/Home">Home</Link> */}
+  <Link to="/Home">Home</Link> 
       <button
         className="link-btn"
         onClick={() => props.onFormSwitch("register")}
