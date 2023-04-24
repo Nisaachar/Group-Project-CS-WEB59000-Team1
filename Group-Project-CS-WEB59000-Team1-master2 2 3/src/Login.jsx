@@ -23,8 +23,8 @@ function Login(props) {
         }
         console.log(user);
         // redirect to home page
-        // <Link to="/Home" />;
-        window.location.href = "/Home";
+        <Link to="/Home" />;
+//         window.location.href = "/Home";
       })
       .catch((error) => {
         console.error(error);
