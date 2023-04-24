@@ -118,6 +118,6 @@ app.get('/api/login', (req, res) => {
 
 // // Serve uploaded images
 // app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
-app.listen(80, () => {
+app.listen(443, () => {
   console.log('Server running on port 80');
 });
