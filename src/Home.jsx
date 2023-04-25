@@ -18,7 +18,7 @@ function Home() {
     <div className="center">
       {/* <img src="/images/Logo.png" alt="Company logo"  className="center-image" style={{ transform: 'scale(0.65)' }}/> */}
       {/* <video src="images/collegeVid.mp4" controls autoplay loop /> */}
-      <video loop autoPlay muted className="video-bg" preload="auto" src="https://keen-douhua-acb606.netlify.app/images/collegeVid.mp4" style={{ }}></video>
+      <video loop autoPlay muted className="video-bg" preload="auto" src="/images/collegeVid.mp4" style={{ }}></video>
     </div>
     
     <div style={{ padding: '0em 3em' }}>
@@ -37,7 +37,7 @@ function Home() {
       <p>
 
         <li>While applying for studies in abroad, one encounters many problem.</li>
-        <img src="/images/studying.jpg" alt="Company logo"  style={{ float: 'right', height: '250px' }}/>
+        <img src="images/studying.jpg" alt="Company logo"  style={{ float: 'right', height: '250px' }}/>
         <li>Like finding a good list of college</li>
         <li>How to apply to them</li>
         <li>What exams are valid for your selected university</li>
