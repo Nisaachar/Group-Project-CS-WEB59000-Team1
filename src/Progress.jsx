@@ -1,134 +1,158 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
+import Header from './Header';
 import './App.css';
-import Header from './Header'
-
-
-// function ProgressBar({ label, value }) {
-//   return (
-//     <div className="progress centre">
-//         <div className="progress-bar">
-//       <div>{label}</div>
-//       <div value={value} style={{width: '20em'}} >{value}% </div>
-//       </div>
-//     </div>
-    
-//     // <td>
-// 		// 				<div className="progress">
-// 		// 					<div className="progress-bar" style={{width: {value}}}>
-// 		// 						<p></p>
-// 		// 					</div>
-// 		// 				</div>
-// 		// 			</td>
-	
-//   );
-// }
-
-function ProgressBar({ label, value }) {
-  const progressStyle = {
-    width: `${value}%`,
-    backgroundColor: value >= 100 ? 'green' : 'lightblue',
-    height: '1.5em',
-    borderRadius: '5px',
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-    fontWeight: 'bold',
-    color: 'white',
-    textAlign: 'center'
-  };
-
-  return (
-    <div className="progress">
-      <div className="progress-bar" style={progressStyle}>
-        {label}
-      </div>
-    </div>
-  );
-}
-
-
-
-// function UserProgress({ user }) {
-//   return (
-//     <div className="">
-    
-//       <h2>{user.username}</h2>
-//       {/* <td>SOP</td>
-// 					<td>
-// 						<div className="progress">
-// 							<div className="progress-bar" style={{width: '150px'}}>
-// 								<p>50%</p>
-// 							</div>
-// 						</div>
-// 					</td> */}
-// 	  <h2>SOP</h2>
-//     <ProgressBar now={user.sop_progress} label={`${user.sop_progress}%`}/>
-//       <h2>Visa Application</h2>
-// 	  <ProgressBar now={user.visa_application_progress} label={`${user.visa_application_progress}%`} />
-//       <h2>i20 Progress</h2>
-// 	  <ProgressBar now={user.i_20_progress} label={`${user.i_20_progress}%`} />
-//     </div>
-//   );
-// }
-
-function UserProgress({ user }) {
-  return (
-    <div className="center">
-      <h2 className='center' style={{paddingTop: '2.5em'}}>{user.username}</h2>
-      <table>
-        <thead>
-          <tr>
-            <th>Progress Type</th>
-            <th>Progress Percentage</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>SOP</td>
-            <td>
-              <ProgressBar now={user.sop_progress} label={`${user.sop_progress}%`} />
-            </td>
-          </tr>
-          <tr>
-            <td>Visa Application</td>
-            <td>
-              <ProgressBar now={user.visa_application_progress} label={`${user.visa_application_progress}%`} />
-            </td>
-          </tr>
-          <tr>
-            <td>i20 Progress</td>
-            <td>
-              <ProgressBar now={user.i_20_progress} label={`${user.i_20_progress}%`} />
-            </td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  );
-}
-
 
 function Progress() {
-  const [users, setUsers] = useState([]);
+    return(
+        <div>
+            <div className="container">
+                <nav>
+                <Header/>
+                </nav>
+                <div className="center">
+                <img src="/images/Logo.png" alt="Company logo"  className="center-image" style={{ transform: 'scale(0.65)' }}/>
+                </div>
+                <body>
+	<div className="container">
+		<h1 style = {{ alignItems: 'center'  }} >Progress Tracker</h1>
+		<table>
+			<thead>
+        <h2>Jon Doe</h2>
+				<tr>
+					<th>Task</th>
+					<th>Progress</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>SOP</td>
+					<td>
+						<div className="progress">
+							<div className="progress-bar" style={{width: '50%'}}>
+								<p>70%</p>
+							</div>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td>I-20 Status</td>
+					<td>
+						<div className="progress">
+							<div className="progress-bar" style={{width: '75%'}}>
+								<p>50%</p>
+							</div>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td>Visa Application</td>
+					<td>
+						<div className="progress">
+							<div className="progress-bar" style={{width: '25%'}}>
+								<p>25%</p>
+							</div>
+						</div>
+					</td>
+				</tr>
+			</tbody>
+		</table>
 
-  useEffect(() => {
-    fetch('http://localhost:8000/api/users')
-      .then((response) => response.json())
-      .then((data) => setUsers(data))
-      .catch((error) => console.log(error));
-  }, []);
 
-  return (
-	
-    <div>
-      <nav>
-      <Header />
-    </nav>
-      {users.map((user) => (
-        <UserProgress key={user._id} user={user} />
-      ))}
-    </div>
-  );
+      {/* second user */}
+      
+      <table>
+			<thead>
+        <h2>Harsh Sharma</h2>
+				<tr>
+					<th>Task</th>
+					<th>Progress</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>SOP</td>
+					<td>
+						<div className="progress">
+							<div className="progress-bar" style={{width: '90%'}}>
+								<p>90%</p>
+							</div>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td>I-20 Status</td>
+					<td>
+						<div className="progress">
+							<div className="progress-bar" style={{width: '15%'}}>
+								<p>15%</p>
+							</div>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td>Visa Application</td>
+					<td>
+						<div className="progress">
+							<div className="progress-bar" style={{width: '45%'}}>
+								<p>45%</p>
+							</div>
+						</div>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+
+    {/* third user */}
+
+    <table>
+			<thead>
+        <h2>Suchir Naik</h2>
+				<tr>
+					<th>Task</th>
+					<th>Progress</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>SOP</td>
+					<td>
+						<div className="progress">
+							<div className="progress-bar" style={{width: '100%'}}>
+								<p>100%</p>
+							</div>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td>I-20 Status</td>
+					<td>
+						<div className="progress">
+							<div className="progress-bar" style={{width: '45%'}}>
+								<p>45%</p>
+							</div>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td>Visa Application</td>
+					<td>
+						<div className="progress">
+							<div className="progress-bar" style={{width: '5%'}}>
+								<p>5%</p>
+							</div>
+						</div>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+
+    {/* end */}
+	</div>
+</body>
+            </div>
+        </div>
+    );
 }
 
 export default Progress;
