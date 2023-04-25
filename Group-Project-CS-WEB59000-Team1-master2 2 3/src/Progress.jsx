@@ -112,7 +112,7 @@ function Progress() {
   const [users, setUsers] = useState([]);
 
   useEffect(() => {
-    fetch('http://localhost:8000/api/users')
+    fetch('https://web-dev-server-wm7w.onrender.com/api/users')
       .then((response) => response.json())
       .then((data) => setUsers(data))
       .catch((error) => console.log(error));
