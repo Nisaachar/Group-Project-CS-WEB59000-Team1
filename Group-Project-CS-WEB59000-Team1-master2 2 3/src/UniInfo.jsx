@@ -2,9 +2,10 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './App.css';
 import Header from './Header'
+import Footer from './Footer'
 
 function UniInfo() {
-  const [selectedUni, setSelectedUni] = useState(null);
+  const [selectedUni, setSelectedUni] = useState('Purdue University');
 
   const handleUniClick = (uniName) => {
     setSelectedUni(uniName === selectedUni ? null : uniName);
@@ -13,15 +14,16 @@ function UniInfo() {
   const isUniSelected = (uniName) => uniName === selectedUni;
 
   return (
-    <div>
+    <div  >
       <div className="container">
         <nav>
           <Header/>
         </nav>
       </div>
       <div className="center">
-        <img src="/images/UniInfo.png" alt="University information"  className="center-image" style={{ transform: 'scale(0.65)' }}/>
+        <img src="/images/cloud.jpg" alt="University information"  className="center-image" style={{ width: '60%', height: '450px' }}/>
       </div>
+      <div style={{ padding: '0em 3em' }}>
       <h2>Universities</h2>
       <button onClick={() => handleUniClick('Purdue University')}>Purdue University</button>
       <button onClick={() => handleUniClick('Ivy Tech Community College')}>Ivy Tech Community College</button>
@@ -96,6 +98,8 @@ The Indiana State University campus is located in Terre Haute, about 70 miles so
 The university offers much to do outside the classroom, including nearly 150 student organizations. ISU students can also get involved in the school's many events and traditions, such as the annual tandem bicycle race. Student athletes can try out for the Indiana State Sycamores varsity sports teams, which compete in the NCAA Division I Missouri Valley Conference. Notable Indiana State University alumni include Willa Brown Chappell, the first woman in the U.S. to hold both a mechanical and a commercial pilot’s license, and Wanda Ramey, one of the first female news anchors in the nation.</p>
         </>
       )}
+      </div>
+      <Footer />
     </div>
   );
 }

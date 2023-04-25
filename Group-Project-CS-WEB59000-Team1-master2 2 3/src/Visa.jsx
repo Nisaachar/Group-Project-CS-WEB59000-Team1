@@ -1,6 +1,7 @@
 import React from 'react';
 import Header from './Header';
 import './App.css';
+import Footer from './Footer'
 
 function Visa() {
   return (
@@ -9,8 +10,9 @@ function Visa() {
       <Header />
     {/* </div> */}
     <div className="center">
-      <img src="/images/Logo.png" alt="Company logo"  className="center-image" style={{ transform: 'scale(0.65)' }}/>
+      <img src="/images/visa.jpg" alt="Company logo"  className="center-image" style={{ width: '100%' }}/>
     </div>
+    <div  style={{ padding: '0em 1em' }}>
     <h2>Types of US Student Visa</h2>
     <p>Before moving on to the USA study visa requirements, let us make you aware about the US student visa types. Given below are the 3 US student visa types:</p>
     <ul>
@@ -52,6 +54,8 @@ function Visa() {
       <li>I-20 form (given by your university/college)</li>
       <li>Visa fee payment confirmation slip</li>
     </ul>
+    </div>
+    <Footer />
   </div>
   );
 }

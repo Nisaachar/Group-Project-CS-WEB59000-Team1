@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Header from './Header'
 import Progress from './Progress';
-
+import Footer from './Footer'
 
 function SOP() {
   
@@ -14,8 +14,12 @@ function SOP() {
             </nav>
             <div>
             <div className="center">
-                <img src="/images/Logo.png" alt="Company logo"  className="center-image" style={{ transform: 'scale(0.65)' }}/>
+                <h1 style={{ paddingTop: '1.7em', fontSize: '2.5em'}}>Don't know how to write an SOP?</h1>
+                {/* <img src="/images/Logo.png" alt="Company logo"  className="center-image" style={{ transform: 'scale(0.65)' }}/> */}
+                <video loop autoPlay muted className="video-bg" preload="auto" src="images/kidSOP.mp4" style={{ paddingTop: '2em'}}></video>
+
             </div>
+            <div style={{ padding: '0em 1em' }}>
             <h2>How to Write a SOP?</h2>
             <h4>What is SOP?</h4>
             <p>
@@ -39,7 +43,7 @@ function SOP() {
             An effective outline for your statement of purpose might look something like this:
             </p>
             <li>
-            INTRODUCTION 
+            INTRODUCTION
             </li>
             <li>
             BODY 
@@ -54,7 +58,9 @@ function SOP() {
             Admissions professionals already have your transcripts, resumé, and test scores; the statement of purpose is your chance to tell your story in your own words.
             </p>
             </div>
+            </div>
         </div> 
+        <Footer />
     </div>
   );
 }

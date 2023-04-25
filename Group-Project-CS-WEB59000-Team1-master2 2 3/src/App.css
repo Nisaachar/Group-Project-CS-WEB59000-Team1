@@ -11,6 +11,15 @@
   flex-direction:column;
 }
 
+.video-bg {
+  width: 100%;
+  max-height: calc(100vh - 250px); /* decrease the height by 100px */
+  object-fit: cover; /* scale the video to fill the container */
+  padding-top: 1.4em;
+  padding-bottom: 2.5em;
+}
+
+
 .nav-button {
   display: inline-block;
   margin-right: 10px;
@@ -47,6 +56,7 @@ body {
 
 body {
   font-family: Arial, sans-serif;
+  color: white;
 }
 
 .container {
@@ -86,27 +96,27 @@ tr:hover {
   background-color: #ddd;
 }
 
-.progress {
+/* .progress {
   background-color: #f2f2f2;
   border-radius: 20px;
   height: 20px;
   margin-bottom: 20px;
   overflow: hidden;
   width: 100%;
-}
+} */
 
-.progress-bar {
+/* .progress-bar {
   background-color: #4CAF50;
   height: 100%;
   text-align: center;
   color: white;
-}
+} */
 
-.progress-bar p {
+/* .progress-bar p {
   line-height: 20px;
   margin: 0;
   padding: 0;
-}
+} */
 
 nav{
   /* margin: auto; */
@@ -131,4 +141,14 @@ body{
 
 p, h3, li{
   padding: 0.5em 2em;
+}
+
+footer{
+  height: 150px;
+  background-color: white;
+  color: black !important;
+  text-align: center;
+  margin-top: 2em;
+  padding-top: 5.5em;
+  background-image: linear-gradient(to right, rgb(123, 207, 255), rgb(119, 214, 255), #447feb);
 }
