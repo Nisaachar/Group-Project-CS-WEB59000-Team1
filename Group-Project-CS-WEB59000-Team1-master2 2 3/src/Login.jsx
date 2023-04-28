@@ -56,6 +56,9 @@ function Login(props) {
           name="password"
         />
         <button type="button" onClick={handleSubmit}>Log In</button>
+        <Link to="/Home">
+        Home.
+        </Link>
       </form>
       {/* <Link to="/Home">Home</Link> */}
       {/* <button className="link-btn" onClick={() => props.onFormSwitch('register')}>Don't have an account? Register here.</button> */}
