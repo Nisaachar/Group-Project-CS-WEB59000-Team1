@@ -16,7 +16,10 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-app.use(cors());
+// app.use(cors());
+app.use(cors({
+  origin: 'https://a-zstudyabroad.netlify.app/'
+}));
 // Defyning the MongoDB connection string to connect to MongoDB database
 const uri = 'mongodb+srv://naiks01:welcome%40123@cluster0.c0l5kdd.mongodb.net/users_details_web_proj?retryWrites=true&w=majority';
 // Configures mongoose to use the database productsdb created
