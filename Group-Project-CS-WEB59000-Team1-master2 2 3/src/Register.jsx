@@ -59,7 +59,7 @@ function Register(props) {
       i_20_progress: 0,
       Admitted: 'None'
     }
-    axios.post(process.env.REACT_APP_API_ENDPOINT+'/users/add', user)
+    axios.post('https://web-dev-server-wm7w.onrender.com/users/add', user)
       .then(res => {
         console.log(res.data);
         setEmail('');

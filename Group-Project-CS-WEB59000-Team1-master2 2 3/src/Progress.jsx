@@ -77,7 +77,7 @@ function Progress() {
   const [sortOrder, setSortOrder] = useState('asc');
 
   useEffect(() => {
-    fetch(process.env.REACT_APP_API_ENDPOINT+'/api/users')
+    fetch('https://web-dev-server-wm7w.onrender.com/api/users')
       .then((response) => response.json())
       .then((data) => {
         if (sortOrder === 'asc') {
