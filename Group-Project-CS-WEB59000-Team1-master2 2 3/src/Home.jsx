@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import Header from './Header'
 import Progress from './Progress'
 import Footer from './Footer'
-
+import college from './assets/collegeVid.mp4'
 
 function Home() {
   
@@ -18,7 +18,7 @@ function Home() {
     <div className="center">
       {/* <img src="/images/Logo.png" alt="Company logo"  className="center-image" style={{ transform: 'scale(0.65)' }}/> */}
       {/* <video src="images/collegeVid.mp4" controls autoplay loop /> */}
-      <video loop autoPlay muted className="video-bg" preload="auto" src="../Images/collegeVid.mp4" style={{ }}></video>
+      <video loop autoPlay muted className="video-bg" preload="auto" src={college} style={{ }}></video>
     </div>
     
     <div style={{ padding: '0em 3em' }}>
