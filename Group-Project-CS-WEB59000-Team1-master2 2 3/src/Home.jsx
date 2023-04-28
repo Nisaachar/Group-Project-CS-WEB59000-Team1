@@ -4,7 +4,7 @@ import Header from './Header'
 import Progress from './Progress'
 import Footer from './Footer'
 import college from './assets/collegeVid.mp4'
-
+import studying from './assets/studying.jpg'
 function Home() {
   
   return (
@@ -37,7 +37,7 @@ function Home() {
       <p>
 
         <li>While applying for studies in abroad, one encounters many problem.</li>
-        <img src="/images/studying.jpg" alt="Company logo"  style={{ float: 'right', height: '250px' }}/>
+        <img src={studying} alt="Company logo"  style={{ float: 'right', height: '250px' }}/>
         <li>Like finding a good list of college</li>
         <li>How to apply to them</li>
         <li>What exams are valid for your selected university</li>

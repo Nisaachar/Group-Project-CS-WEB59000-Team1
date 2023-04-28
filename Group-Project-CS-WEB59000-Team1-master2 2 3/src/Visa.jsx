@@ -2,6 +2,7 @@ import React from 'react';
 import Header from './Header';
 import './App.css';
 import Footer from './Footer'
+import visa from './assets/visa.jpg'
 
 function Visa() {
   return (
@@ -10,7 +11,7 @@ function Visa() {
       <Header />
     {/* </div> */}
     <div className="center">
-      <img src="/images/visa.jpg" alt="Company logo"  className="center-image" style={{ width: '100%' }}/>
+      <img src={visa} alt="Company logo"  className="center-image" style={{ width: '100%' }}/>
     </div>
     <div  style={{ padding: '0em 1em' }}>
     <h2>Types of US Student Visa</h2>

@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import './App.css';
 import Header from './Header'
 import Footer from './Footer'
+import cloud from './assets/cloud.jpg'
 
 function UniInfo() {
   const [selectedUni, setSelectedUni] = useState('Purdue University');
@@ -21,7 +22,7 @@ function UniInfo() {
         </nav>
       </div>
       <div className="center">
-        <img src="/images/cloud.jpg" alt="University information"  className="center-image" style={{ width: '60%', height: '450px' }}/>
+        <img src={cloud} alt="University information"  className="center-image" style={{ width: '60%', height: '450px' }}/>
       </div>
       <div style={{ padding: '0em 3em' }}>
       <h2>Universities</h2>

@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import Header from './Header'
 import Progress from './Progress';
 import Footer from './Footer'
+import kidSOP from './assets/kidSOP.mp4'
 
 function SOP() {
   
@@ -16,7 +17,7 @@ function SOP() {
             <div className="center">
                 <h1 style={{ paddingTop: '1.7em', fontSize: '2.5em'}}>Don't know how to write an SOP?</h1>
                 {/* <img src="/images/Logo.png" alt="Company logo"  className="center-image" style={{ transform: 'scale(0.65)' }}/> */}
-                <video loop autoPlay muted className="video-bg" preload="auto" src="images/kidSOP.mp4" style={{ paddingTop: '2em'}}></video>
+                <video loop autoPlay muted className="video-bg" preload="auto" src={kidSOP} style={{ paddingTop: '2em'}}></video>
 
             </div>
             <div style={{ padding: '0em 1em' }}>
