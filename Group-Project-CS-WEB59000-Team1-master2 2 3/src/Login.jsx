@@ -63,9 +63,9 @@ function Login(props) {
             className="form-input"
           />
           <button type="button" onClick={handleSubmit} className="form-button">Log In</button>
-          <Link to="/Home" className="home-link">
-            Home
-          </Link>
+//           <Link to="/Home" className="home-link">
+//             Home
+//           </Link>
         </form>
         <Link to="/Register" className="register-link">
           Don't have an account? Register here.
