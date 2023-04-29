@@ -37,7 +37,11 @@ const usersSchema = new mongoose.Schema({
   visa_application_progress: String,
   i_20_progress: String,
   GPA : String,
+  GRE : String,
+  country: String,
+  domain: String,
   Admitted : String
+  
 }, {
   collection: 'users' // setting the collection name to 'users'
 });
@@ -74,7 +78,10 @@ app.post('/users/add', (req, res) => {
     sop_progress: req.body.sop_progress,
     visa_application_progress: req.body.visa_application_progress,
     i_20_progress: req.body.i_20_progress,
-    GPA : req.body.GPA
+    GPA : req.body.GPA,
+    GRE: req.body.GRE,
+    country: req.body.country,
+    domain: req.body.domain
   });
 
   user.save()
