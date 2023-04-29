@@ -8,7 +8,7 @@ function Header() {
       <Link to="/UniInfo" className="nav-button">University Information</Link>
       <Link to="/SOP" className="nav-button">SOP</Link>
       {/* <Link to="/" className="nav-button">Visa Information</Link> */}
-      <Link to="/Progress" className="nav-button">Progress</Link>
+      <Link to="/Progress" className="nav-button">Student Data</Link>
       <Link to="/Visa" className="nav-button">Visa Information</Link>
     </nav>
   );
