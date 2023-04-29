@@ -1,42 +1,3 @@
-// import React, { useState } from "react";
-// import { Link } from "react-router-dom";
-// import axios from 'axios';
-
-
-// function Register(props) {
-//   const [email, setEmail] = useState('');
-//   const [pass, setPass] = useState('');
-//   const [name, setName] = useState('');
-
-//   const handleSubmit = (e) => {
-//     e.preventDefault();
-//     console.log(email);
-//   }
-
-//   return (
-//     <div className="auth-form-container">
-//       <h2>Register</h2>
-//       <form className="register-form" onSubmit={handleSubmit}>
-//         <label htmlFor="name">Full name</label>
-//         <input value={name} name="name" onChange={(e) => setName(e.target.value)} id="name" placeholder="full Name" />
-//         <label htmlFor="email">email</label>
-//         <input value={email} onChange={(e) => setEmail(e.target.value)}type="email" placeholder="youremail@gmail.com" id="email" name="email" />
-//         <label htmlFor="password">password</label>
-//         <input value={pass} onChange={(e) => setPass(e.target.value)} type="password" placeholder="********" id="password" name="password" />
-//         <button type="submit">Log In</button>
-//       </form>
-//       {/* <button className="link-btn" onClick={() => props.onFormSwitch('login')}>Already have an account? Login here.</button> */}
-//       <Link to="/Login">
-//         <button>Already have an account? Login here.</button>
-//         </Link>   
-//     </div>
-//   )
-// }
-
-// export default Register;
-
-
-
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import axios from 'axios';
@@ -46,6 +7,9 @@ function Register(props) {
   const [password, setPassword] = useState('');
   const [name, setName] = useState('');
   const [GPA, setGPA] = useState('');
+  const [GRE, setGRE]= useState('');
+  const [country, setCountry]= useState('');
+  const [domain, setDomain]= useState('');
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -54,10 +18,14 @@ function Register(props) {
       email: email,
       password: password,
       GPA: GPA,
+      GRE: GRE,
+      country: country,
+      domain:domain,
       sop_progress: 0,
       visa_application_progress: 0,
       i_20_progress: 0,
       Admitted: 'None'
+      
     }
     axios.post('https://web-dev-server-wm7w.onrender.com/users/add', user)
       .then(res => {
@@ -66,6 +34,9 @@ function Register(props) {
         setPassword('');
         setName('');
         setGPA('');
+        setGRE('');
+        setCountry('');
+        setDomain('');
       })
       .catch(err => console.log(err));
   }
@@ -81,6 +52,9 @@ function Register(props) {
         <label htmlFor="password">Password</label>
         <input value={password} onChange={(e) => setPassword(e.target.value)} type="password" placeholder="********" id="password" name="password" />
         <input value={GPA} onChange={(e) => setGPA(e.target.value)} type="GPA" placeholder="4.0" id="GPA" name="GPA" />
+        <input value={GRE} onChange={(e) => setGRE(e.target.value)} type="GRE" placeholder="325" id="GRE" name="GRE" />
+        <input value={country} onChange={(e) => setCountry(e.target.value)} type="country" placeholder="USA" id="country" name="country" />
+        <input value={domain} onChange={(e) => setDomain(e.target.value)} type="domain" placeholder="Computer Science" id="domain" name="domain" />
         <button type="submit">Register</button>
       </form>
       <Link to="/login">Already have an account? Login here.</Link>
