@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import './assets/login.css';
+import loginVideo from './assets/loginNewBg.mp4';
 
 function Login(props) {
   const [username, setEmail] = useState("");
@@ -30,43 +32,50 @@ function Login(props) {
         setError(error.message);
       });
   };
-  
 
   return (
-    <div className="auth-form-container">
-      <h2>Login</h2>
-      {error && <div className="error">{error}</div>}
-      <form className="login-form" onSubmit={handleSubmit}>
-        <label htmlFor="username">username</label>
-        <input
-          value={username}
-          onChange={(e) => setEmail(e.target.value)}
-          type="username"
-          placeholder="username"
-          id="username"
-          name="username"
-        />
-        <label htmlFor="password">password</label>
-        <input
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-          type="password"
-          placeholder="********"
-          id="password"
-          name="password"
-        />
-        <button type="button" onClick={handleSubmit}>Log In</button>
-        <Link to="/Home">
-        Home.
+    <div className="login-wrapper">
+            <video loop autoPlay muted className="video-bg2" preload="auto" src={loginVideo} style={{ }}></video>
+
+    <div className="login-container">
+      <div className="auth-form-container">
+        <h2 className="form-title">Login</h2>
+        {error && <div className="error">{error}</div>}
+        <form className="login-form" onSubmit={handleSubmit}>
+          <label htmlFor="username" className="form-label">Username</label>
+          <input
+            value={username}
+            onChange={(e) => setEmail(e.target.value)}
+            type="username"
+            placeholder="username"
+            id="username"
+            name="username"
+            className="form-input"
+          />
+          <label htmlFor="password" className="form-label">Password</label>
+          <input
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            type="password"
+            placeholder="********"
+            id="password"
+            name="password"
+            className="form-input"
+          />
+          <button type="button" onClick={handleSubmit} className="form-button">Log In</button>
+          <Link to="/Home" className="home-link">
+            Home
+          </Link>
+        </form>
+        <Link to="/Register" className="register-link">
+          Don't have an account? Register here.
         </Link>
-      </form>
-      {/* <Link to="/Home">Home</Link> */}
-      {/* <button className="link-btn" onClick={() => props.onFormSwitch('register')}>Don't have an account? Register here.</button> */}
-      <Link to="/Register">
-        Don't have an account? Register here.
-        </Link>
+      </div>
     </div>
+    </div>
+
   );
 }
 
 export default Login;
+
