@@ -155,4 +155,9 @@ footer{
 
 .toggle-container {
   padding-top: 2em;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2em;
 }
